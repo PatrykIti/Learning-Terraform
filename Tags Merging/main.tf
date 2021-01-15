@@ -1,5 +1,4 @@
 provider "azurerm" {
-  version = "~> 2.18"
   features {}
 }
 
@@ -31,11 +30,11 @@ locals {
 module "networking" {
   source   = "./modules/networking"
   location = local.location
-  tags     = "${merge(local.tags_default, local.tags_net)}"
+  tags     = merge(local.tags_default, local.tags_net)
 }
 
 module "storage" {
   source   = "./modules/storage"
   location = local.location
-  tags     = "${merge(local.tags_default, local.tags_stor)}"
+  tags     = merge(local.tags_default, local.tags_stor)
 }
