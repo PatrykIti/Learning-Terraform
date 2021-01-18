@@ -35,9 +35,10 @@ module "backend_remote_state" {
   tenant_id       = local.tenant_id
 
   resource_group_name_remote_state = local.resource_group_name_remote_state
+  location                         = local.location
   resource_prefix_remote_state     = local.resource_prefix_remote_state
   key_vault_name_remote_state      = local.key_vault_name_remote_state
-  location                         = local.location
+  
   tags = local.tags
 }
 

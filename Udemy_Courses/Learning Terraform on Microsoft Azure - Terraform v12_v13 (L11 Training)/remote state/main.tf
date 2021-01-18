@@ -21,7 +21,7 @@ resource "azurerm_storage_container" "terraform_backend_storage" {
 
 resource "azurerm_key_vault" "key_vault" {
   name                = var.key_vault_name_remote_state
-  resource_group_name = var.resource_prefix_remote_state
+  resource_group_name = var.resource_group_name_remote_state
   location            = var.location
   sku_name            = "standard"
   tenant_id           = var.tenant_id
