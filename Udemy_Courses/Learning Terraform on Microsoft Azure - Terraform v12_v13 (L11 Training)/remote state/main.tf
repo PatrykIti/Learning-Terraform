@@ -25,6 +25,7 @@ resource "azurerm_key_vault" "key_vault" {
   location            = var.location
   sku_name            = "standard"
   tenant_id           = var.tenant_id
+  soft_delete_enabled = true
 }
 
 resource "azurerm_key_vault_access_policy" "key_vault_access_policy" {
