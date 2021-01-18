@@ -11,7 +11,7 @@ variable "key_vault_name_remote_state" {
 }
 
 variable "tags" {
-  type = map
+  type = map(any)
 }
 
 variable "resource_group_name_remote_state" {

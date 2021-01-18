@@ -4,7 +4,7 @@
 
 
 provider "azurerm" {
-  features{}
+  features {}
 }
 
 data "azurerm_subscription" "current" {}
@@ -38,7 +38,7 @@ module "backend_remote_state" {
   location                         = local.location
   resource_prefix_remote_state     = local.resource_prefix_remote_state
   key_vault_name_remote_state      = local.key_vault_name_remote_state
-  
+
   tags = local.tags
 }
 
